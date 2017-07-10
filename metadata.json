@@ -8,7 +8,7 @@
   "keyword-2": "Leisure",
   "data-url": "http://api.britishcycling.com/openactive/rpde",
   "created": "2014-07-20",
-  "documentation-url": "https://github.com/salfordcommunitylesiure/opendata",
+  "documentation-url": "https://github.com/salfordcommunityleisure/opendata",
   "rpde-version": "0.2.3",
   "license-name": "",
   "license-url": "https://creativecommons.org/licenses/by/4.0/",
@@ -17,5 +17,5 @@
   "mailchimp": "require([\"mojo/signup-forms/Loader\"], function(L) { L.start({\"baseUrl\":\"mc.us16.list-manage.com\",\"uuid\":\"34052d49a110f3737fd2c8e16\",\"lid\":\"2b48241bba\"}) })",
   "copyright-notice": "",
   "odi-certificate-number": "",
-  "publish": false
+  "publish": true
 }
