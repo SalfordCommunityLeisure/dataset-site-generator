@@ -6,7 +6,7 @@
   "publisher-url": "https://www.salfordcommunityleisure.co.uk",
   "keyword-1": "Salford",
   "keyword-2": "Leisure",
-  "data-url": "http://api.britishcycling.com/openactive/rpde",
+  "data-url": "https://salford-lc-openactive.herokuapp.com",
   "created": "2014-07-20",
   "documentation-url": "https://github.com/salfordcommunityleisure/opendata",
   "rpde-version": "0.2.3",

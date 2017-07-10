@@ -26,7 +26,7 @@ webshims.polyfill('forms es5');
 
 var INPUTS = "#inputdata input, #inputdata select, #inputdata textarea";
 
-/* 
+/*
  * Generate index.html
  */
 function generateIntoTextbox(state) {
@@ -35,7 +35,7 @@ function generateIntoTextbox(state) {
     $( "#output" ).val(output);
 }
 
-/* 
+/*
  * Replace empty metadata on first run
  */
 function firstRun() {
@@ -44,7 +44,7 @@ function firstRun() {
     if ($( "#attribution-url" ).val() == "") $( "#attribution-url" ).val(location.origin + "/");
 }
 
-/* 
+/*
  * Save state to metadata.json textarea
  */
 function saveState() {
@@ -58,7 +58,7 @@ function saveState() {
         } else {
             value = $( this ).val();
         }
-        
+
         state[id] = value;
     });
 
@@ -67,7 +67,7 @@ function saveState() {
     return state;
 }
 
-/* 
+/*
  * Load state from metadata.json textarea
  */
 function loadState() {
@@ -92,7 +92,7 @@ function loadState() {
     return state;
 }
 
-/* 
+/*
  * Load state from metadata.json textarea
  */
 function loadFile(url, cb) {
@@ -108,7 +108,7 @@ function loadFile(url, cb) {
     });
 }
 
-/* 
+/*
  * Extract code from mailchimp textbox
  */
 function extractMailchimp() {
@@ -118,7 +118,7 @@ function extractMailchimp() {
         var rx = /require.*}\) }\)/g;
         var arr = rx.exec(value);
         if (arr) {
-            value = arr[0]; 
+            value = arr[0];
             textBox.val(value);
         } else {
             alert ("Invalid Mailchimp code, please ensure you are clicking 'View Code' in the Subscriber Popup feature within the 'Signup Forms' section of a List");
@@ -127,7 +127,7 @@ function extractMailchimp() {
     }
 }
 
-/* 
+/*
  * Extract code from mailchimp textbox
  */
 function extractOdiCertificateNumber() {
@@ -142,7 +142,7 @@ function extractOdiCertificateNumber() {
             //Already a number in the box, do nothing
         } else if (arr && arr.length == 2) {
             //Extract the number and put it in the box
-            value = arr[1]; 
+            value = arr[1];
             textBox.val(value);
         } else {
             alert ("Invalid Open Data Certificate code, please ensure you are copying the Badge, Certificate, or URL from the 'Embed' button in your Certificate page");
@@ -189,7 +189,7 @@ function showTemplateManualEntry() {
     $( "#templateManual" ).show();
 }
 
-/* 
+/*
  * On Page Load
  */
 $(function() {
@@ -208,7 +208,7 @@ $(function() {
             showForm();
         });
     });
-})    
+})
 
 </script>
 <style>
@@ -250,7 +250,7 @@ $(function() {
         <input class="pure-input-1" id="keyword-2" placeholder="Sky Ride">
 
         <label for="data-url"><strong>Openactive RPDE Data Feed URL</strong></label>
-        <input class="pure-input-1" id="data-url" type="url" placeholder="http://api.ridesociallondon.co.uk/api/EventFeed">
+        <input class="pure-input-1" id="data-url" type="url" placeholder="https://salford-lc-openactive.herokuapp.com/">
 
         <label for="created"><strong>Date of Publishing</strong> (the date your Openactive RPDE Data Feed URL went live with the correct license, use today's date if you are creating the license today)</label>
         <input class="pure-input-1" id="created" type="date" >
