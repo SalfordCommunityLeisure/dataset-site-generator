@@ -40,31 +40,47 @@
     <!-- JSON-LD conforming to Google Structured Data specification. -->
     <script type="application/ld+json">
     {
-      "@context" : "http://schema.org",
-      "@type" : "Dataset",
-      "name" : "Salford Community Leisure sessions ",
-      "id": "https://salfordcommunityleisure.github.io/",
+      "@context": [
+        "https://schema.org/",
+        "https://openactive.io/"
+      ],
+      "@type": "Dataset",
+      "@id": "https://salfordcommunityleisure.github.io/",
       "url": "https://salfordcommunityleisure.github.io/",
-      "description" : "Session data from the salfordcommunityleisure.co.uk site; published using OpenActive RPDE v0.2.3.",
+      "name": "Salford Community Leisure sessions ",
+      "description": "Session data from the salfordcommunityleisure.co.uk site; published using OpenActive RPDE v0.2.3.",
       "keywords":[
-         "Salford",
-         "Leisure",
-         "OpenActive"
+          "Salford",
+          "Leisure",
+          "OpenActive"
       ],
       "license" : "https://creativecommons.org/licenses/by/4.0/",
-      "distribution" : {
-        "@type" : "DataDownload",
-        "encodingFormat" : "application/vnd.openactive.rpde+json; version=0.2.3",
-        "contentUrl" : "https://salford-lc-openactive.herokuapp.com"
-      },
-      "inLanguage": "en-GB",
+      "distribution": [
+        {
+          "@type" : "DataDownload",
+          "encodingFormat" : "application/vnd.openactive.rpde+json; version={rpdeversion}",
+          "contentUrl" : "https://salford-lc-openactive.herokuapp.com"
+        }
+      ],
+      "discussionUrl": "https://github.com/salfordcommunityleisure/opendata/issues",
+      "documentation": "https://github.com/salfordcommunityleisure/opendata",
+      "inLanguage": [
+        "en-GB"
+      ],
       "publisher": {
-         "@type": "Organization", 
-         "name": "Salford Community Leisure",
-         "url": "https://www.salfordcommunityleisure.co.uk",
-         "logo": "https://salfordcommunityleisure.github.io/images/logo.png"
+        "@type": "Organization",
+        "name": "Salford Community Leisure",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://salfordcommunityleisure.github.io/images/logo.png"
+        },
+        "url": "https://www.salfordcommunityleisure.co.uk"
       },
-      "datePublished" : "2014-07-20T00:00:00.000Z"
+      "datePublished": "2014-07-20T00:00:00.000Z",
+      "backgroundImage": {
+        "@type": "ImageObject",
+        "url": "https://salfordcommunityleisure.github.io/images/bg.jpg"
+      }
     }
     </script>
   </head>
